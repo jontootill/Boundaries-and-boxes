@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boundaries and Boxes</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Boundaries and Boxes</h1>
+
+        <!-- Step 1: Intensity Selection -->
+        <div class="section">
+            <label class="section-title">1. Select Intensity Level</label>
+            <div class="grid-options-3col" id="intensity-group">
+                <button type="button" class="option-btn selected" data-value="romantic">Romantic</button>
+                <button type="button" class="option-btn" data-value="sensual">Sensual</button>
+                <button type="button" class="option-btn" data-value="erotic">Erotic</button>
+            </div>
+        </div>
+
+        <!-- Step 2: Target Area Selection -->
+        <div class="section">
+            <label class="section-title">2. Select Target Area</label>
+            <div class="grid-options-2col" id="zone-group">
+                <button type="button" class="option-btn selected" data-value="all">All / Any Zone</button>
+                <button type="button" class="option-btn" data-value="neck_jawline">Neck and Jawline</button>
+                <button type="button" class="option-btn" data-value="shoulders_upper_back">Shoulders and Upper Back</button>
+                <button type="button" class="option-btn" data-value="arms_hands">Arms &amp; Hands</button>
+                <button type="button" class="option-btn" data-value="lower_back_hips">Lower Back and Hips</button>
+                <button type="button" class="option-btn" data-value="thighs_knees">Thighs and Knees</button>
+                <button type="button" class="option-btn" data-value="feet_calves">Feet and Calves</button>
+                <button type="button" class="option-btn" data-value="scalp_hair">Scalp and Hair</button>
+                <button type="button" class="option-btn" data-value="chest_torso">Chest and Torso</button>
+                <button type="button" class="option-btn" data-value="inner_thighs">Inner Thighs</button>
+                <button type="button" class="option-btn" data-value="intimate">Intimate Zones</button>
+            </div>
+        </div>
+
+        <!-- Step 3: Game Setup & Controls -->
+        <div class="section">
+            <label class="section-title">3. Game Controls</label>
+            <div class="controls-row">
+                <button type="button" id="start-game-btn" class="action-btn">Start / Reset Game</button>
+            </div>
+        </div>
+
+        <!-- Game Info & Status -->
+        <div id="game-status-panel" class="status-panel hidden">
+            <div id="turn-indicator" class="turn-indicator">Current Turn: <strong>Player 1 (Blue)</strong></div>
+            <div id="score-board" class="score-board">
+                <span>Player 1: <strong id="score-p1">0</strong></span>
+                <span>Player 2: <strong id="score-p2">0</strong></span>
+            </div>
+        </div>
+
+        <!-- Challenge / Prompt Panel (Positioned ABOVE the game canvas) -->
+        <div id="challenge-card" class="challenge-card hidden">
+            <h3 id="challenge-title">Box Captured!</h3>
+            <p id="challenge-subtitle">Choose a challenge to perform:</p>
+            <div id="choice-container" class="choice-container">
+                <button type="button" id="option-a-btn" class="challenge-choice-btn"></button>
+                <button type="button" id="option-b-btn" class="challenge-choice-btn"></button>
+            </div>
+            <button type="button" id="close-challenge-btn" class="secondary-btn hidden">Continue Game</button>
+        </div>
+
+        <!-- Game Canvas Area -->
+        <div class="canvas-container">
+            <canvas id="gameCanvas" width="400" height="400"></canvas>
+        </div>
+
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

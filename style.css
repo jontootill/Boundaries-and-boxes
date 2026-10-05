@@ -1,0 +1,174 @@
+:root {
+    --bg-color: #121214;
+    --card-bg: #1e1e24;
+    --accent: #e63946;
+    --accent-hover: #d62828;
+    --text-main: #f1faee;
+    --text-sub: #a8dede;
+    --border: #2b2d42;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    background-color: var(--card-bg);
+    width: 100%;
+    max-width: 500px;
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+    border: 1px solid var(--border);
+}
+
+h1, h2 {
+    text-align: center;
+    margin-top: 0;
+}
+
+.section {
+    margin-bottom: 24px;
+}
+
+label.section-title {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: var(--text-sub);
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+}
+
+/* Option Selectors */
+.grid-options {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.grid-options-2col {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+
+.option-btn {
+    background-color: var(--bg-color);
+    border: 1px solid var(--border);
+    color: var(--text-main);
+    padding: 12px 8px;
+    border-radius: 8px;
+    cursor: pointer;
+    text-align: center;
+    font-size: 0.9rem;
+    transition: all 0.2s ease;
+}
+
+.option-btn.selected {
+    background-color: var(--accent);
+    border-color: var(--accent);
+    font-weight: bold;
+}
+
+button.primary-btn {
+    width: 100%;
+    background-color: var(--accent);
+    color: white;
+    border: none;
+    padding: 14px;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background 0.2s ease;
+}
+
+button.primary-btn:hover {
+    background-color: var(--accent-hover);
+}
+
+button.secondary-btn {
+    width: 100%;
+    background-color: transparent;
+    border: 1px solid var(--border);
+    color: var(--text-sub);
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: all 0.2s ease;
+}
+
+button.secondary-btn:hover {
+    border-color: var(--text-sub);
+    color: var(--text-main);
+}
+
+.card-display {
+    background: var(--bg-color);
+    border: 2px solid var(--accent); /* Solid accent border gives it a clean "box card" frame */
+    padding: 24px;
+    border-radius: 12px;
+    min-height: 140px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 1.1rem;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5); /* Inner shadow for a 3D box effect */
+}
+
+.hidden {
+    display: none;
+}
+
+.challenge-card {
+    background-color: #1a1a2e;
+    border: 2px solid #e94560;
+    border-radius: 8px;
+    padding: 15px;
+    margin: 15px 0;
+    text-align: center;
+}
+
+.choice-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 15px 0;
+}
+
+.challenge-choice-btn {
+    background-color: #16213e;
+    color: #f1faee;
+    border: 1px solid #4cc9f0;
+    padding: 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    text-align: left;
+    font-size: 0.95rem;
+    transition: background-color 0.2s;
+}
+
+.challenge-choice-btn:hover {
+    background-color: #0f3460;
+    border-color: #f72585;
+}
